@@ -17,11 +17,11 @@ function handleButton(){
     return(
 <div class='aqui' style={{padding:'20px'}}>
 
-    <div className="control">
-        <button onClick={handleButton} className="button is-link">Add Food Here </button>
+    <div className="control" style={{display:'flex',justifyContent:'center'}}>
+        <button onClick={handleButton} className="button is-primary">Add Food Here </button>
     </div>
     <br></br>
-   {show? <section>
+   {show? <section className='container' style={{width:'50%'}}>
             <div className="field">
                 <label className="label">Food name:</label>
                 <div className="control">
@@ -37,13 +37,13 @@ function handleButton(){
             </div>
 
             <div className="field">
-                <label className="label">Image::</label>
+                <label className="label">Image:</label>
                 <div className="control">
                     <input className="input" name='image' type="text" placeholder="Type the url of the image"/>
                 </div>
             </div>
         <br></br>
-            <div className="control">
+            <div className="control" style={{display:'flex', justifyContent:'flex-end'}}>
         <button className="button is-primary">Submit</button>
         </div>
     </section> : null}
